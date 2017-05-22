@@ -3,8 +3,7 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
       t.string :name
       t.text :description
-
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
