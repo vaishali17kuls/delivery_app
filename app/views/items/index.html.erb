@@ -10,6 +10,11 @@
 
 <div class="item-body">
 <%= truncate(item.description, length: 100) %>
+<div class="item-meta-details">
+
+<small>Created by: <%= item.drone.dronename if item.drone%>, <%= time_ago_in_words(item.created_at) %> ago, last updated: <%= time_ago_in_words(item.updated_at) %> ago</small>
+
+</div>
 </div>
 
 <div class="item-actions">
