@@ -1,0 +1,17 @@
+<h1 align="center">Welcome to <%= @drone.dronename %>'s page</h1>
+
+<h4 align="center"><%= @drone.dronename %>'s items</h4>
+
+<div class="center">
+
+<%= will_paginate @drone_items %>
+
+</div>
+
+<%= render 'items/item', obj: @drone_items %>
+
+<div class="center">
+
+<%= will_paginate @drone_items %>
+
+</div>
