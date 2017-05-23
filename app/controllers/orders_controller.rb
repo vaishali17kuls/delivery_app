@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   
   def new
-   @order=Order.new
+    @order = Order.new
   end
   
   def index
@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
   
   private
   def order_params
-   params.require(:order).permit()
+   params.require(:order).permit(:info)
   end
   
 end
