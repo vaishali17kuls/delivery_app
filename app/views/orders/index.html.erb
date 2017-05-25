@@ -1,11 +1,22 @@
 <h1 align="center">Listing all items</h1>
-<% obj.each do |order| %>
+<% @orders.each do |order| %>
+<% if order.item && order.item.drone %>
 <div class="row">
   <div class="col-xs-8 col-xs-offset-2">
     <div class="well well-lg">
-      
-        <%=  order.item.name %>
-          </div>
-          </div>
-          </div>
+      <%=  order.item.name %>
+        -> delivered by: 
+        <%= order.item.drone.dronename if order.item && order.item.drone %>
+    </div>
+  </div>
+</div>
+<% else %>
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="well well-lg">
+         Item not delivered
+    </div>
+  </div>
+</div>    
+<% end %>
 <% end %>

@@ -12,8 +12,8 @@ get 'login', to: 'sessions#new'
 post 'login', to: 'sessions#create'
 delete 'logout', to: 'sessions#destroy'
 get 'deliver', to: 'orders#new'
-post 'deliver', to: 'orders#create'
-resources :orders, except: [:new, :create]
+#post 'deliver', to: 'orders#create'
+resources :orders, except: [:new]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
