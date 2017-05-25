@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Things to cover:
 
-* Ruby version
+Database: sqlite3
+Components: Navigation bar, login forms, html pages, CRUD operations.
+Models: item, drone, order..each of them having controller with respective folder under views.
+Styling done through Bootstrap and css.
 
-* System dependencies
+This assignment is build on MVC framework using Ruby on Rails.
+Migrations are created for every table involved.
+The models are associated using one to many association from drone to items and one to many association from item to orders.
+The website is assumed to be developed by command center who commands drone to ship a particular item.
+The drone creates his account through signup functionality on the homepage and then is logged in.
+On logging in he can create a item by filling a form and can also edit/delete/view his item.
+The command center can see the list of registered drones on 'drones' on bar of top of every page.
+To deliver the item drone has to go to items listing page through 'items' on bar of top of every page.
+Therein he can hit the deliver button, creating an entry for d item in order table.
+The command center can see the list of delivered items on 'orders' on bar of top of every page.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
